@@ -11,25 +11,22 @@
 
 	<!-- Bootstrap core CSS -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-	<link rel="stylesheet" href="admin.css">
+	<link rel="stylesheet" href="layout.css">
 	<!-- Custom styles for this template -->
 	<link href="navbar-top-fixed.css" rel="stylesheet">
 </head>
 
 <body>
 	<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-white">
-		<a class="navbar-brand" href=""><img class="imgwh" src="logo.png"></a>
+		<a class="navbar-brand" href=""><img id="logo" src="logo.png"></a>
 
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+		<button class="navbar-toggler" id="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
 		<div class="collapse navbar-collapse" id="navbarCollapse">
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item ">
-					<a class="nav-link" href="#">Đăng Nhập</a>
-				</li>
-				<li class="nav-item ">
-					<a class="nav-link" href="#">Đăng Ký</a>
+					<a class="nav-link" href="#">Dành Cho Ứng Viên</a>
 				</li>
 			</ul>
 			<ul class="navbar-nav mr-2 ">
@@ -39,8 +36,7 @@
 			</ul>
 		</div>
 	</nav>
-
-	<div class="container-fluid" >
+	<div class="container-fluid" id="container-fluid1">
 		<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
 			<div class="carousel-inner" id="container1">
 				<div class="carousel-item active">
@@ -68,8 +64,9 @@
 		<div class="row">
 			<div class="col-sm-10 offset-sm-1 text-center">
 				<h1 class="display-3">Tìm Việc Nhanh</h1>
-				<div class="info-form">
-					<form action="" class="form-inline justify-content-center">
+				<div class="info-form ">
+					<p>Việc làm hôm nay tự tin làm cầu nối cho tuyển dụng và tìm việc thành công</p>
+					<form action="" class="form-inline justify-content-center" style="margin-bottom: 10px;">
 						<div class="form-group">
 							<label class="sr-only">Name</label>
 							<input type="text" class="form-control" placeholder="Tên công việc">
@@ -78,7 +75,7 @@
 							<label class="sr-only">Ngành nghề</label>
 							<select class="form-control form-control">
 								<option selected>Ngành nghề</option>
-								<option value="1">CNTT</option>
+								<option value="1">Công Nghệ thông tin</option>
 								<option value="2">QTKD</option>
 								<option value="3">KTTC</option>
 							</select>
@@ -92,23 +89,57 @@
 								<option value="3">Three</option>
 							</select>
 						</div>
-						<button type="submit" class="btn btn-success ">Tìm Kiếm</button>
+						<button type="submit" class="btn btn-info ">Tìm Kiếm</button>
 					</form>
+					<a href="" class="text-right"><img src="upload\img\layout\search.svg">Tìm kiếm nâng cao</a>
 				</div>
 				<br>
 			</div>
 		</div>
 	</div>
-
 	<div class=" bg-light">
-		<div id="container" class="container container-vieclam bg-light">
-			<div class="col-sm-10 offset-sm-1 text-center">
-				<h3 class="display-3">Việc Làm Nổi Bật</h3>      </div>
-				<div class="row ">
-					<div class="col-12 container">
-						<ul class="list-unstyled row">
-							<li class="list-item col-6 py-2">
-								<div class="card">
+		<div id="container" id="container-vieclam" class="container bg-light">
+			<div class="col-sm-10 offset-sm-1 text-center"><h3 class="display-3">Việc Làm Nổi Bật</h3></div>
+			<div class="row ">
+				<div class="col-12 container">
+					<ul class="list-unstyled row">
+						<li class="list-item col-6 py-2">
+							<div class="card">
+								<div class="row no-gutters">
+									<div class="col-auto">
+										<img src="//placehold.it/120" class="img-fluid" alt="">
+									</div>
+									<div class="col">
+										<div class="card-block px-2"><h5 class="card-title ">Kế toán xuất nhập khẩu</h5>
+											<p class="card-text">	<a href="" style="color:#6C757D;"> Công ty đầu tư NSEF</a></p>
+											<ul class="list-inline">
+												<li class="list-inline-item"><p class="card-text "> <img src="upload\img\layout\dollar-sign.svg"> 5-10 triệu </p></li>
+												<li class="list-inline-item"><p class="card-text "> <img src="upload\img\layout\clock.svg">Hạn chót: 30/8/2020</p></li>
+											</ul> 
+										</div>
+									</div>
+								</div></div></li>
+
+								<li class="list-item col-6 py-2"><div class="card">
+									<div class="row no-gutters">
+										<div class="col-auto">
+											<img src="//placehold.it/120" class="img-fluid" alt="">
+										</div>
+										<div class="col">
+											<div class="card-block px-2">
+												<h5 class="card-title ">Kế toán xuất nhập khẩu</h5>
+												<p class="card-text">	<a href="" style="color:#6C757D;"> Công ty đầu tư NSEF</a></p>
+
+												<ul class="list-inline">
+													<li class="list-inline-item"><p class="card-text "> <img src="upload\img\layout\dollar-sign.svg"> 5-10 triệu </p></li>
+													<li class="list-inline-item"><p class="card-text "> <img src="upload\img\layout\clock.svg">Hạn chót: 30/8/2020</p></li>
+												</ul> 
+											</div>
+										</div>
+									</div>
+								</div></li>
+
+								<li class="list-item col-6 py-2"><div class="card">
 									<div class="row no-gutters">
 										<div class="col-auto">
 											<img src="//placehold.it/120" class="img-fluid" alt="">
@@ -123,141 +154,104 @@
 												</ul> 
 											</div>
 										</div>
-									</div></div></li>
+									</div>
 
-									<li class="list-item col-6 py-2"><div class="card">
-										<div class="row no-gutters">
-											<div class="col-auto">
-												<img src="//placehold.it/120" class="img-fluid" alt="">
-											</div>
-											<div class="col">
-												<div class="card-block px-2">
-													<h5 class="card-title ">Kế toán xuất nhập khẩu</h5>
-													<p class="card-text">	<a href="" style="color:#6C757D;"> Công ty đầu tư NSEF</a></p>
+								</div></li>
 
-													<ul class="list-inline">
-														<li class="list-inline-item"><p class="card-text "> <img src="upload\img\layout\dollar-sign.svg"> 5-10 triệu </p></li>
-														<li class="list-inline-item"><p class="card-text "> <img src="upload\img\layout\clock.svg">Hạn chót: 30/8/2020</p></li>
-													</ul> 
-												</div>
+								<li class="list-item col-6 py-2"><div class="card">
+									<div class="row no-gutters">
+										<div class="col-auto">
+											<img src="//placehold.it/120" class="img-fluid" alt="">
+										</div>
+										<div class="col">
+											<div class="card-block px-2">
+												<h5 class="card-title ">Kế toán xuất nhập khẩu</h5>
+												<p class="card-text">	<a href="" style="color:#6C757D;"> Công ty đầu tư NSEF</a></p>
+												<ul class="list-inline">
+													<li class="list-inline-item"><p class="card-text "> <img src="upload\img\layout\dollar-sign.svg"> 5-10 triệu </p></li>
+													<li class="list-inline-item"><p class="card-text "> <img src="upload\img\layout\clock.svg">Hạn chót: 30/8/2020</p></li>
+												</ul> 
 											</div>
 										</div>
-									</div></li>
+									</div>
+								</div></li>
 
-									<li class="list-item col-6 py-2"><div class="card">
-										<div class="row no-gutters">
-											<div class="col-auto">
-												<img src="//placehold.it/120" class="img-fluid" alt="">
-											</div>
-											<div class="col">
-												<div class="card-block px-2">
-													<h5 class="card-title ">Kế toán xuất nhập khẩu</h5>
-													<p class="card-text">	<a href="" style="color:#6C757D;"> Công ty đầu tư NSEF</a></p>
-													<ul class="list-inline">
-														<li class="list-inline-item"><p class="card-text "> <img src="upload\img\layout\dollar-sign.svg"> 5-10 triệu </p></li>
-														<li class="list-inline-item"><p class="card-text "> <img src="upload\img\layout\clock.svg">Hạn chót: 30/8/2020</p></li>
-													</ul> 
-												</div>
+								<li class="list-item col-6 py-2"><div class="card">
+									<div class="row no-gutters">
+										<div class="col-auto">
+											<img src="//placehold.it/120" class="img-fluid" alt="">
+										</div>
+										<div class="col">
+											<div class="card-block px-2">
+												<h5 class="card-title ">Kế toán xuất nhập khẩu</h5>
+												<p class="card-text">	<a href="" style="color:#6C757D;"> Công ty đầu tư NSEF</a></p>
+												<ul class="list-inline">
+													<li class="list-inline-item"><p class="card-text "> <img src="upload\img\layout\dollar-sign.svg"> 5-10 triệu </p></li>
+													<li class="list-inline-item"><p class="card-text "> <img src="upload\img\layout\clock.svg">Hạn chót: 30/8/2020</p></li>
+												</ul> 
 											</div>
 										</div>
+									</div>
+								</div></li>
 
-									</div></li>
-
-									<li class="list-item col-6 py-2"><div class="card">
-										<div class="row no-gutters">
-											<div class="col-auto">
-												<img src="//placehold.it/120" class="img-fluid" alt="">
-											</div>
-											<div class="col">
-												<div class="card-block px-2">
-													<h5 class="card-title ">Kế toán xuất nhập khẩu</h5>
-													<p class="card-text">	<a href="" style="color:#6C757D;"> Công ty đầu tư NSEF</a></p>
-													<ul class="list-inline">
-														<li class="list-inline-item"><p class="card-text "> <img src="upload\img\layout\dollar-sign.svg"> 5-10 triệu </p></li>
-														<li class="list-inline-item"><p class="card-text "> <img src="upload\img\layout\clock.svg">Hạn chót: 30/8/2020</p></li>
-													</ul> 
-												</div>
+								<li class="list-item col-6 py-2"><div class="card">
+									<div class="row no-gutters">
+										<div class="col-auto">
+											<img src="//placehold.it/120" class="img-fluid" alt="">
+										</div>
+										<div class="col">
+											<div class="card-block px-2">
+												<h5 class="card-title ">Kế toán xuất nhập khẩu</h5>
+												<p class="card-text">	<a href="" style="color:#6C757D;"> Công ty đầu tư NSEF</a></p>
+												<ul class="list-inline">
+													<li class="list-inline-item"><p class="card-text "> <img src="upload\img\layout\dollar-sign.svg"> 5-10 triệu </p></li>
+													<li class="list-inline-item"><p class="card-text "> <img src="upload\img\layout\clock.svg">Hạn chót: 30/8/2020</p></li>
+												</ul> 
 											</div>
 										</div>
-									</div></li>
-
-									<li class="list-item col-6 py-2"><div class="card">
-										<div class="row no-gutters">
-											<div class="col-auto">
-												<img src="//placehold.it/120" class="img-fluid" alt="">
-											</div>
-											<div class="col">
-												<div class="card-block px-2">
-													<h5 class="card-title ">Kế toán xuất nhập khẩu</h5>
-													<p class="card-text">	<a href="" style="color:#6C757D;"> Công ty đầu tư NSEF</a></p>
-													<ul class="list-inline">
-														<li class="list-inline-item"><p class="card-text "> <img src="upload\img\layout\dollar-sign.svg"> 5-10 triệu </p></li>
-														<li class="list-inline-item"><p class="card-text "> <img src="upload\img\layout\clock.svg">Hạn chót: 30/8/2020</p></li>
-													</ul> 
-												</div>
-											</div>
-										</div>
-									</div></li>
-
-									<li class="list-item col-6 py-2"><div class="card">
-										<div class="row no-gutters">
-											<div class="col-auto">
-												<img src="//placehold.it/120" class="img-fluid" alt="">
-											</div>
-											<div class="col">
-												<div class="card-block px-2">
-													<h5 class="card-title ">Kế toán xuất nhập khẩu</h5>
-													<p class="card-text">	<a href="" style="color:#6C757D;"> Công ty đầu tư NSEF</a></p>
-													<ul class="list-inline">
-														<li class="list-inline-item"><p class="card-text "> <img src="upload\img\layout\dollar-sign.svg"> 5-10 triệu </p></li>
-														<li class="list-inline-item"><p class="card-text "> <img src="upload\img\layout\clock.svg">Hạn chót: 30/8/2020</p></li>
-													</ul> 
-												</div>
-											</div>
-										</div>
-									</div></li>
-									
-								</ul>
-							</div>
+									</div>
+								</div></li>
+							</ul>
 						</div>
 					</div>
 				</div>
+			</div>
 
-				<div id="container" class="container container-nganhnghe">
-					<h3 class="display-6 a5sd">Việc làm theo ngành nghề</h3>      
-					<div class="row" ><div class="col-12 container">
-						<ul class="list-unstyled row">
-							<li class="list-item col-4 py-2"><a href="">Cơ khí (5)</a></li>
-							<li class="list-item col-4 py-2"><a href="">Cơ khí (5)</a></li>
-							<li class="list-item col-4 py-2"><a href="">Cơ khí (5)</a></li>
-							<li class="list-item col-4 py-2"><a href="">Cơ khí (5)</a></li>
-							<li class="list-item col-4 py-2"><a href="">Cơ khí (5)</a></li>
-							<li class="list-item col-4 py-2"><a href="">Cơ khí (5)</a></li>
-							<li class="list-item col-4 py-2"><a href="">Cơ khí (5)</a></li>
-							<li class="list-item col-4 py-2"><a href="">Cơ khí (5)</a></li>
-						</ul>
-					</div></div>
-				</div>
+			<div id="container" id="container-nganhnghe" class="container">
+				<h3 class="display-3">Việc Làm Theo Ngành Nghề</h3>
+				<div class="row" ><div class="col-12 container">
+					<ul class="list-unstyled row">
+						<li class="list-item col-4 py-2"><a href="">Cơ khí (5)</a></li>
+						<li class="list-item col-4 py-2"><a href="">Cơ khí (5)</a></li>
+						<li class="list-item col-4 py-2"><a href="">Cơ khí (5)</a></li>
+						<li class="list-item col-4 py-2"><a href="">Cơ khí (5)</a></li>
+						<li class="list-item col-4 py-2"><a href="">Cơ khí (5)</a></li>
+						<li class="list-item col-4 py-2"><a href="">Cơ khí (5)</a></li>
+						<li class="list-item col-4 py-2"><a href="">Cơ khí (5)</a></li>
+						<li class="list-item col-4 py-2"><a href="">Cơ khí (5)</a></li>
+					</ul>
+				</div></div>
+			</div>
 
-				<div class="container-fluid" id="container2" style="background-color: #66CCFF;">
-					<div class="row ">
-						<div class="col-sm-3">
-							<img src="logo.png" class="d-block w-100" alt="...">
-						</div>
-						<div class="col-sm-3 ">
-							<ul class="list-unstyled">
-								<li>Từ Chí Thành</li>
-								<li>Phạm Ngọc Thạch</li>
-							</ul>  	  	  	  	 
-						</div>
-						<div class="col-sm-3">
+			<div class="container-fluid" id="container2" style="background-color: #66CCFF;">
+				<div class="row ">
+					<div class="col-sm-3">
+						<img src="logo.png" class="d-block w-100" alt="...">
+					</div>
+					<div class="col-sm-3 ">
+						<ul class="list-unstyled">
+							<li>Từ Chí Thành</li>
+							<li>Phạm Ngọc Thạch</li>
+						</ul>  	  	  	  	 
+					</div>
+					<div class="col-sm-3">
 
-						</div>
-						<div class="col-sm-3">
+					</div>
+					<div class="col-sm-3">
 
-						</div>
 					</div>
 				</div>
+			</div>
 
 		<!-- Bootstrap core JavaScript
 			================================================== -->

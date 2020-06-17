@@ -19,3 +19,7 @@ Route::get('/', function () {
 Route::get('/index', function () {
 	return view('index');
 });
+Route::get('/test', function () {
+	return view('ungvien/layout');
+});
+
