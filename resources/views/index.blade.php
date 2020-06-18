@@ -63,26 +63,26 @@
 	<div id="container" class="container">
 		<div class="row">
 			<div class="col-sm-10 offset-sm-1 text-center">
-				<h1 class="display-3">Tìm Việc Nhanh</h1>
+				<h1 class="display-3">Tìm Việc Nhanh</h1>		
 				<div class="info-form ">
 					<p>Việc làm hôm nay tự tin làm cầu nối cho tuyển dụng và tìm việc thành công</p>
-					<form action="" class="form-inline justify-content-center" style="margin-bottom: 10px;">
-						<div class="form-group">
+					<form action="" class="form-inline justify-content-center w-100" style="margin-bottom: 10px;">
+						<div class="form-group w-25">
 							<label class="sr-only">Name</label>
-							<input type="text" class="form-control" placeholder="Tên công việc">
+							<input type="text" class="form-control w-100" placeholder="Tên công việc">
 						</div>
-						<div class="form-group">
+						<div class="form-group  w-25">
 							<label class="sr-only">Ngành nghề</label>
-							<select class="form-control form-control">
+							<select class="form-control w-100  ">
 								<option selected>Ngành nghề</option>
 								<option value="1">Công Nghệ thông tin</option>
 								<option value="2">QTKD</option>
 								<option value="3">KTTC</option>
 							</select>
 						</div>
-						<div class="form-group">
+						<div class="form-group  w-25">
 							<label class="sr-only">Mức lương</label>
-							<select class="form-control form-control">
+							<select class="form-control w-100">
 								<option selected>Mức lương</option>
 								<option value="1">One</option>
 								<option value="2">Two</option>
