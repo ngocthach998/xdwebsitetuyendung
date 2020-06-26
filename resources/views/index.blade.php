@@ -11,13 +11,14 @@
 
 	<!-- Bootstrap core CSS -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-	<link rel="stylesheet" href="layout.css">
+	
 	<!-- Custom styles for this template -->
 	<link href="navbar-top-fixed.css" rel="stylesheet">
+	<link rel="stylesheet" href="layout.css">
 </head>
 
 <body>
-	<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-white">
+	<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-white" style="">
 		<a class="navbar-brand" href=""><img id="logo" src="logo.png"></a>
 
 		<button class="navbar-toggler" id="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,7 +26,7 @@
 		</button>
 		<div class="collapse navbar-collapse" id="navbarCollapse">
 			<ul class="navbar-nav mr-auto">
-				<li class="nav-item ">
+				<li class="nav-item">
 					<a class="nav-link" href="#">Dành Cho Ứng Viên</a>
 				</li>
 			</ul>
@@ -66,27 +67,22 @@
 				<h1 class="display-3">Tìm Việc Nhanh</h1>		
 				<div class="info-form ">
 					<p>Việc làm hôm nay tự tin làm cầu nối cho tuyển dụng và tìm việc thành công</p>
-					<form action="" class="form-inline justify-content-center w-100" style="margin-bottom: 10px;">
+					<form action="timkiemviec" class="form-inline justify-content-center w-100" style="margin-bottom: 10px;">
 						<div class="form-group w-25">
-							<label class="sr-only">Name</label>
-							<input type="text" class="form-control w-100" placeholder="Tên công việc">
+							<label class="sr-only">Tên công việc</label>
+							<input type="text" class="form-control w-100" placeholder="Tên công việc" name="tencongviec">
 						</div>
 						<div class="form-group  w-25">
 							<label class="sr-only">Ngành nghề</label>
-							<select class="form-control w-100  ">
-								<option selected>Ngành nghề</option>
-								<option value="1">Công Nghệ thông tin</option>
-								<option value="2">QTKD</option>
-								<option value="3">KTTC</option>
+							<select class="form-control w-100" id="nganhnghe" name="nganhnghe">
+								<option selected value="">Ngành nghề</option>							
 							</select>
 						</div>
 						<div class="form-group  w-25">
-							<label class="sr-only">Mức lương</label>
-							<select class="form-control w-100">
-								<option selected>Mức lương</option>
-								<option value="1">One</option>
-								<option value="2">Two</option>
-								<option value="3">Three</option>
+							<label class="sr-only">Địa điểm</label>
+							<select class="form-control w-100" id="thanhpho" name="thanhpho">
+								<option selected value="">Thành phố</option>
+
 							</select>
 						</div>
 						<button type="submit" class="btn btn-info ">Tìm Kiếm</button>
@@ -220,15 +216,8 @@
 			<div id="container" id="container-nganhnghe" class="container">
 				<h3 class="display-3">Việc Làm Theo Ngành Nghề</h3>
 				<div class="row" ><div class="col-12 container">
-					<ul class="list-unstyled row">
-						<li class="list-item col-4 py-2"><a href="">Cơ khí (5)</a></li>
-						<li class="list-item col-4 py-2"><a href="">Cơ khí (5)</a></li>
-						<li class="list-item col-4 py-2"><a href="">Cơ khí (5)</a></li>
-						<li class="list-item col-4 py-2"><a href="">Cơ khí (5)</a></li>
-						<li class="list-item col-4 py-2"><a href="">Cơ khí (5)</a></li>
-						<li class="list-item col-4 py-2"><a href="">Cơ khí (5)</a></li>
-						<li class="list-item col-4 py-2"><a href="">Cơ khí (5)</a></li>
-						<li class="list-item col-4 py-2"><a href="">Cơ khí (5)</a></li>
+					<ul class="list-unstyled row" id="dsvieclam">
+						
 					</ul>
 				</div></div>
 			</div>
@@ -256,11 +245,59 @@
 		<!-- Bootstrap core JavaScript
 			================================================== -->
 			<!-- Placed at the end of the document so the pages load faster -->
-			<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 			<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 			<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
 			<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 			<script src="../../../../assets/js/ie10-viewport-bug-workaround.js"></script>
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$.ajax({
+						type:'GET',
+						url:'api/thanhpho',
+						success:function(data){
+							
+							var kq='';
+							$.each(data,function(k,v){
+
+								kq= '<option value="'+v.id+'">'+v.tenthanhpho+'</option>';
+								$('#thanhpho').append(kq);
+							});
+
+						}
+					});
+
+					$.ajax({
+						type:'GET',
+						url:'api/nganhnghe',
+						success:function(data){
+							
+							var kq='';
+							$.each(data,function(k,v){
+
+								kq= '<option value="'+v.id+'">'+v.tennganhnghe+'</option>';
+								$('#nganhnghe').append(kq);
+							});
+
+						}
+					});
+
+					$.ajax({
+						type:'GET',
+						url:'api/nganhnghe',
+						success:function(data){
+							
+							var kq='';
+							$.each(data,function(k,v){
+
+								kq= '<li class="list-item col-4 py-2"><a href="">'+v.tennganhnghe+'</a></li>';
+								$('#dsvieclam').append(kq);
+							});
+
+						}
+					});
+				});
+			</script>
 		</body>
 		</html>

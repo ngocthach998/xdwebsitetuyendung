@@ -19,7 +19,8 @@ Route::get('/', function () {
 Route::get('/index', function () {
 	return view('index');
 });
-Route::get('/test', function () {
-	return view('ungvien/layout');
-});
+Route::get('/test', 'UngvienController@test');
+//Route::get('/timkiemviec','Api\TimkiemviecController@index');
+Route::get('/timkiemviec','UngvienController@index');
+Route::get('/tintuyendung/{id}','UngvienController@tintuyendung');
 
