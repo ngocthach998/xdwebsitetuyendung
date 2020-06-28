@@ -17,12 +17,16 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
 	return $request->user();
 });
-Route::apiResource('thanhpho', 'Api\ThanhphoController')->only(['index', 'show']);
-Route::apiResource('nganhnghe', 'Api\NganhngheController')->only(['index', 'show']);
-Route::apiResource('timkiemviec', 'Api\TimkiemviecController')->only(['index', 'show']);
+Route::apiResource('thanhpho', 'api\ThanhphoController')->only(['index', 'show']);
+Route::apiResource('nganhnghe', 'api\NganhngheController')->only(['index', 'show']);
+Route::apiResource('timkiemviec', 'api\TimkiemviecController')->only(['index', 'show']);
 Route::apiResource('mucluong', 'Api\MucluongController')->only(['index', 'show']);
 Route::apiResource('kinhnghiem', 'Api\KinhnghiemController')->only(['index', 'show']);
 Route::apiResource('kynang', 'Api\KynangController')->only(['index', 'show']);
 Route::apiResource('trinhdo', 'Api\TrinhdoController')->only(['index', 'show']);
+Route::apiResource('ungvien_nop_tin', 'Api\Ungvien_nop_tinController');
 Route::apiResource('hinhthuclamviec', 'Api\HinhthuclamviecController')->only(['index', 'show']);
+
+
+
 

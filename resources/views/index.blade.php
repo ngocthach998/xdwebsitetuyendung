@@ -27,7 +27,7 @@
 		<div class="collapse navbar-collapse" id="navbarCollapse">
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item">
-					<a class="nav-link" href="#">Dành Cho Ứng Viên</a>
+					<a class="nav-link" href="timkiemviec">Dành Cho Ứng Viên</a>
 				</li>
 			</ul>
 			<ul class="navbar-nav mr-2 ">

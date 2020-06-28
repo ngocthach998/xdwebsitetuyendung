@@ -36,7 +36,23 @@ else{
 
 									</div>
 									<div class="col-md-4">
-										<button type="button" class="btn btn-danger w-100 h-100">NỘP HỒ SƠ</button>
+
+						<?php if(Auth::guard('ungvien')->check()) {?>
+							@if (session('success'))
+<div class="alert alert-success">
+      <p>{{ session('success') }}</p>
+</div>
+@endif
+										<form action="ungvien/luuvieclam/{{$data->id}}">
+
+											<button type="submit" class="btn btn-danger w-100 h-100" >NỘP HỒ SƠ</button>
+										</form>
+										<?php 
+											}else{
+										?>
+											<button type="submit" class="btn btn-danger w-100 h-100" id="nophoso">NỘP HỒ SƠ</button>
+										<?php }?>
+
 									</div>
 								</div>
 							</div>
@@ -92,26 +108,26 @@ else{
 				<div class="card-body text-left">
 					<div class="row">
 						<div class="col-2 font-weight-bold text-info">
-						  	<p>Mô tả công việc</p>
+							<p>Mô tả công việc</p>
 						</div>
 						<div class="col-10">
-						  {{	$data->motacongviec}}
+							{{	$data->motacongviec}}
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-2 font-weight-bold text-info">
-						  	  	<p>Quyền lợi</p>
+							<p>Quyền lợi</p>
 						</div>
 						<div class="col-10">
-						  	{{	$data->quyenloi}}
+							{{	$data->quyenloi}}
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-2 font-weight-bold text-info">
-						  		<p>Yêu cầu khác</p>
+							<p>Yêu cầu khác</p>
 						</div>
 						<div class="col-10">
-						  	{{	$data->yeucaukhac}}
+							{{	$data->yeucaukhac}}
 						</div>
 					</div>
 				</div>
@@ -123,5 +139,20 @@ else{
 <?php }
 ?>
 @endsection
+
+
+
 @section('script')
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#nophoso').click(function(){
+			alert('Đăng nhập để nộp hồ sơ.')
+		})
+
+
+	});
+
+</script>
+
 @endsection

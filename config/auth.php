@@ -44,7 +44,17 @@ return [
         'api' => [
             'driver' => 'token',
             'provider' => 'users',
-            'hash' => false,
+           // 'hash' => false,
+        ],
+        //đây là đoạn mình thêm vào dùng để xác thực
+        'ungvien' => [
+            'driver' => 'session',
+            'provider' => 'ungvien',
+        ],
+        'ungvien-api' => [
+            'driver' => 'token',
+            'provider' => 'ungvien',
+          //   'hash' => false,
         ],
     ],
 
@@ -70,7 +80,11 @@ return [
             'driver' => 'eloquent',
             'model' => App\User::class,
         ],
-
+//truy suất dữ liệu cho bảng
+        'ungvien' => [
+            'driver' => 'eloquent',
+            'model' => App\ungvien::class,
+        ],
         // 'users' => [
         //     'driver' => 'database',
         //     'table' => 'users',
@@ -98,6 +112,11 @@ return [
             'table' => 'password_resets',
             'expire' => 60,
             'throttle' => 60,
+        ],
+         'ungvien' => [
+            'provider' => 'ungvien',
+            'table' => 'password_resets',
+            'expire' => 60,
         ],
     ],
 
