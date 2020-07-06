@@ -56,6 +56,15 @@ return [
             'provider' => 'ungvien',
           //   'hash' => false,
         ],
+        'nhatuyendung' => [
+            'driver' => 'session',
+            'provider' => 'nhatuyendung',
+        ],
+        'nhatuyendung-api' => [
+            'driver' => 'token',
+            'provider' => 'nhatuyendung',
+          //   'hash' => false,
+        ],
     ],
 
     /*
@@ -84,6 +93,14 @@ return [
         'ungvien' => [
             'driver' => 'eloquent',
             'model' => App\ungvien::class,
+        ],
+          'nhatuyendung' => [
+            'driver' => 'eloquent',
+            'model' => App\nhatuyendung::class,
+        ],
+            'admin' => [
+            'driver' => 'eloquent',
+            'model' => App\admin::class,
         ],
         // 'users' => [
         //     'driver' => 'database',
@@ -115,6 +132,16 @@ return [
         ],
          'ungvien' => [
             'provider' => 'ungvien',
+            'table' => 'password_resets',
+            'expire' => 60,
+        ],
+        'nhatuyendung' => [
+            'provider' => 'nhatuyendung',
+            'table' => 'password_resets',
+            'expire' => 60,
+        ],
+        'admin' => [
+            'provider' => 'admin',
             'table' => 'password_resets',
             'expire' => 60,
         ],

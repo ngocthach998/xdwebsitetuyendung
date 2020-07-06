@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class tintuyendung_kynang extends Model
 {
-   protected $table="tintuyendung_thanhpho";
+   protected $table="tintuyendung_kynang";
 	public $timestamps=false;
 	public function kn()
 	{

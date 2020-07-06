@@ -19,7 +19,7 @@
 
 <body class="bg-info">
 
-	<nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color:hsl(180, 100%, 93%);">
+	<nav class="rounded-bottom navbar navbar-expand-md navbar-dark fixed-top" style="background-color:hsl(180, 100%, 93%);">
 		<a class="navbar-brand" href=""><img id="logo" src="logo.png"></a>
 	</nav>
 
@@ -78,11 +78,11 @@
 				<a href="ungvien/tintuyendungdanop" class="list-group-item border-0"><div >
 					<img src="upload\img\layout\search.svg">Tin tin tuyển dụng đã nộp	
 				</div></a>
-				<a href="" class="list-group-item border-0"><div >
-					<img src="upload\img\layout\search.svg">Thông tin hồ sơ		
+				<a href="ung-vien/ho-so" class="list-group-item border-0"><div >
+					<img src="upload\img\layout\search.svg">Hồ sơ
 				</div></a>
-				<a href="" class="list-group-item border-0"><div >
-					<img src="upload\img\layout\search.svg">Thông tin hồ sơ		
+				<a href="ung-vien/tin-tuyen-dung-luu" class="list-group-item border-0"><div >
+					<img src="upload\img\layout\search.svg">Tin tin tuyển dụng đã lưu	
 				</div></a>
 				<a href="" class="list-group-item border-0"><div >
 					<img src="upload\img\layout\search.svg">Thông tin hồ sơ		

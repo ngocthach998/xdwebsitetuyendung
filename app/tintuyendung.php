@@ -18,6 +18,10 @@ class tintuyendung extends Model
 	{
 		return $this->hasMany('App\tintuyendung_thanhpho','id_tintuyendung');
 	}
+	public function ungvien_nop_tin()
+	{
+		return $this->hasMany('App\ungvien_nop_tin','id_tintuyendung');
+	}
 	public function kynang()
 	{
 		

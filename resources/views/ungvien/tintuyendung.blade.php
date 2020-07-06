@@ -23,10 +23,10 @@ else{
 					<div class="row">
 						<div class="col-12 text-left ">
 							<h4 class="card-title text-info">{{$data->tieudetuyendung}}</h4>
-							<h6 class="card-title"><a href="">{{$data->nhatuyendung->tencongty}}</a></h6>
+							<h6 class="card-title"><a href="danh-sach-tin-nha-tuyen-dung/{{$data->id_nhatuyendung}}.html">{{$data->nhatuyendung->tencongty}}</a></h6>
 							<div class="row">
 								<div class="col-md-8 list-inline">
-									<button type="button" class="btn btn-light list-inline-item"><img src="upload\img\layout\clock.svg">Lưu việc làm</button>
+									<form action="ung-vien/luu-viec-lam/{{$data->id}}"><button type="submit" class="btn btn-light list-inline-item"><img src="upload\img\layout\clock.svg">Lưu việc làm</button></form>
 									<button type="button" class="btn btn-light list-inline-item"><img src="upload\img\layout\clock.svg">Chia sẻ</button>
 
 									<p class="list-inline-item"><img src="upload\img\layout\clock.svg">Hạn nộp hồ sơ :
@@ -43,7 +43,7 @@ else{
       <p>{{ session('success') }}</p>
 </div>
 @endif
-										<form action="ungvien/luuvieclam/{{$data->id}}">
+										<form action="ung-vien/nop-ho-so/{{$data->id}}">
 
 											<button type="submit" class="btn btn-danger w-100 h-100" >NỘP HỒ SƠ</button>
 										</form>

@@ -58,7 +58,7 @@
 
 							</div>
 							<div class="card-body ">
-								<span class="font-weight-bold text-success">Thành phố: </span><span title="<?php echo Auth::guard('ungvien')->user()->id_thanhpho; ?>" id="idthanhpho" ><?php echo Auth::guard('ungvien')->user()->tp->tenthanhpho; ?></span>
+								<span class="font-weight-bold text-success">Thành phố: </span><span title="<?php echo Auth::guard('ungvien')->user()->id_thanhpho; ?>" id="idthanhpho" ><?php echo Auth::guard('ungvien')->user()->thanhpho->tenthanhpho; ?></span>
 
 							</div>
 						</div>
@@ -171,12 +171,12 @@
 						</div>
 					</div>
 				</div>
-			</div></div>
-
+			</div>
 		</div>
+
 	</div>
-	<div class="list-group-item w-100 border-0">Dapibus ac facilisis in</div>
-	<div class="list-group-item w-100 border-0">Vestibulum at eros</div>
+</div>
+
 </div>
 </div>
 </div>

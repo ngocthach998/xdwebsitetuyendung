@@ -34,6 +34,7 @@
 							</div>
 
 							<div class="dropdown-menu w-100 text-left" aria-labelledby="dropdownMucluong" id="dropdownMucluonglist">
+								
 							</div>
 						</div>
 
@@ -123,7 +124,7 @@
 								<div class="col">
 									<div class="card-block px-2 ">
 										<h6 class="card-title text-nowrap text-truncate" title="{{$value->tieudetuyendung}}" style="margin-top: 4px;"><a href="tintuyendung/{{$value->id}}">{{$value->tieudetuyendung}}</a></h6>
-										<p class="card-text" title="{{$value->nhatuyendung->tencongty}}"><a href="" style="color:#6C757D;">{{$value->nhatuyendung->tencongty}}</a></p>											
+										<p class="card-text" title="{{$value->nhatuyendung->tencongty}}"><a href="danh-sach-tin-nha-tuyen-dung/{{$value->id_nhatuyendung}}.html" style="color:#6C757D;">{{$value->nhatuyendung->tencongty}}</a></p>											
 									</div>
 								</div>
 								<div class="col-2 text-center" title="Mức lương">
@@ -272,8 +273,9 @@ $.ajax({
 	$.ajax({
 		type:'GET',
 		url:'api/mucluong',
-		success:function(data){
 
+		success:function(data){
+		
 			var kq='';
 			$.each(data,function(k,v){
 

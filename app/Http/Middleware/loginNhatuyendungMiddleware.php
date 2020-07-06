@@ -4,7 +4,7 @@ namespace App\Http\Middleware;
 use Illuminate\Support\Facades\Auth;
 use Closure;
 
-class loginUngvienMiddleware
+class loginNhatuyendungMiddleware
 {
     /**
      * Handle an incoming request.
@@ -15,13 +15,13 @@ class loginUngvienMiddleware
      */
     public function handle($request, Closure $next)
     {
-     if(Auth::guard('ungvien')->check())
+     if(Auth::guard('nhatuyendung')->check())
      {
-       
+         
         return $next($request);
     }
     else{
-        return  redirect('timkiemviec');
-            }
+        return  redirect()->back();
+    }
 }
 }

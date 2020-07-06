@@ -26,7 +26,9 @@ Route::apiResource('kynang', 'Api\KynangController')->only(['index', 'show']);
 Route::apiResource('trinhdo', 'Api\TrinhdoController')->only(['index', 'show']);
 Route::apiResource('ungvien_nop_tin', 'Api\Ungvien_nop_tinController');
 Route::apiResource('hinhthuclamviec', 'Api\HinhthuclamviecController')->only(['index', 'show']);
-
+Route::apiResource('quymonhansu', 'Api\QuymonhansuController')->only(['index', 'show']);
+Route::apiResource('capbac', 'Api\CapbacController')->only(['index', 'show']);
+Route::apiResource('ngoaingu', 'Api\NgoainguController')->only(['index', 'show']);
 
 
 
