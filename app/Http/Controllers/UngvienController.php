@@ -84,8 +84,8 @@ public function postNguoithamkhaosua(Request $request,$id)
 
  public function getTrinhdongoainguxoa($id_ngoaingu)
  {
-  $ungvien_ngoaingu=ungvien_ngoaingu::where('id_ungvien',Auth::guard('ungvien')->user()->id)->where('id_ngoaingu',$id_ngoaingu)->get();
-  $ungvien_ngoaingu[0]->delete();
+  $ungvien_ngoaingu=ungvien_ngoaingu::where('id_ungvien',Auth::guard('ungvien')->user()->id)->where('id_ngoaingu',$id_ngoaingu)->delete();
+
   return redirect()->back()->with('alert','Xóa thành công.');
 }
 
@@ -112,41 +112,24 @@ public function postTrinhdongoaingumoi(Request $request)
  }
  public function postTrinhdongoaingusua(Request $request,$id_ngoaingu)
  {
+ 
 
-  if($request->ngoaingu==$id_ngoaingu)
-  {
-   $ungvien_ngoaingu=ungvien_ngoaingu::where('id_ungvien',Auth::guard('ungvien')->user()->id)->where('id_ngoaingu',$id_ngoaingu)->get();
-
-   $ungvien_ngoaingu[0]->trinhdonghe=$request->trinhdonghe;
-   $ungvien_ngoaingu[0]->trinhdonoi=$request->trinhdonoi;
-   $ungvien_ngoaingu[0]->trinhdodoc=$request->trinhdodoc;
-   $ungvien_ngoaingu[0]->trinhdoviet=$request->trinhdoviet;
-   $ungvien_ngoaingu[0]->id_ngoaingu=$request->ngoaingu;
-   $ungvien_ngoaingu[0]->tenngoaingukhac=$request->ngoaingu;
-  // $ungvien_ngoaingu->id_ungvien=Auth::guard('ungvien')->user()->id;
-   $ungvien_ngoaingu[0]->save();
-
-   return redirect()->back()->with('alert','Sửa thành công 5');
- }
-
- if(count($ungvien_ngoaingu=ungvien_ngoaingu::where('id_ungvien',Auth::guard('ungvien')->user()->id)->where('id_ngoaingu',$id_ngoaingu)->get())==1)
-
+if($request->ngoaingu==$id_ngoaingu)
  {
+  $ungvien_ngoaingu=ungvien_ngoaingu::where('id_ungvien',Auth::guard('ungvien')->user()->id)->where('id_ngoaingu',$id_ngoaingu)->update(['trinhdonghe'=>$request->trinhdonghe,'trinhdonoi'=>$request->trinhdonoi,'trinhdodoc'=>$request->trinhdodoc,'trinhdoviet'=>$request->trinhdoviet]);
 
-   return redirect()->back()->with('alert','Đã tồn tại.');
+   return redirect()->back()->with('alert','Sửa thành công.');}  
+   
 
- }
 
+  if(count($ungvien_ngoaingu=ungvien_ngoaingu::where('id_ungvien',Auth::guard('ungvien')->user()->id)->where('id_ngoaingu',$request->ngoaingu)->get())==1)
 
- $ungvien_ngoaingu[0]->trinhdonghe=$request->trinhdonghe;
- $ungvien_ngoaingu[0]->trinhdonoi=$request->trinhdonoi;
- $ungvien_ngoaingu[0]->trinhdodoc=$request->trinhdodoc;
- $ungvien_ngoaingu[0]->trinhdoviet=$request->trinhdoviet;
- $ungvien_ngoaingu[0]->id_ngoaingu=$request->ngoaingu;
- $ungvien_ngoaingu[0]->tenngoaingukhac=$request->ngoaingu;
-  // $ungvien_ngoaingu->id_ungvien=Auth::guard('ungvien')->user()->id;
- $ungvien_ngoaingu[0]->save();
- return redirect()->back()->with('alert','Sửa thành công 2.');
+   
+    return redirect()->back()->with('alert','Đã tồn tại.');
+
+ $ungvien_ngoaingu=ungvien_ngoaingu::where('id_ungvien',Auth::guard('ungvien')->user()->id)->where('id_ngoaingu',$id_ngoaingu)->update(['trinhdonghe'=>$request->trinhdonghe,'trinhdonoi'=>$request->trinhdonoi,'trinhdodoc'=>$request->trinhdodoc,'trinhdoviet'=>$request->trinhdoviet,'id_ngoaingu'=>$request->ngoaingu]);
+
+   return redirect()->back()->with('alert','Sửa thành công.');
 }
 public function postTrinhdotinhoc(Request $request)
 {
